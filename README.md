@@ -26,3 +26,41 @@ Login a user.
 - **Content**: `{ errors: Array }`
 - **Code**: 401
 - **Content**: `{ message: "Invalid Email or Password" }`
+
+### GET /users/profile
+
+Get the profile of the authenticated user.
+
+**URL**: `/users/profile`
+
+**Method**: `GET`
+
+**Headers**:
+- `Authorization` (String): Bearer token.
+
+**Success Response**:
+- **Code**: 200
+- **Content**: `{ user: Object }`
+
+**Error Responses**:
+- **Code**: 401
+- **Content**: `{ message: "Unauthorized" }`
+
+### GET /users/logout
+
+Logout the authenticated user.
+
+**URL**: `/users/logout`
+
+**Method**: `GET`
+
+**Headers**:
+- `Authorization` (String): Bearer token.
+
+**Success Response**:
+- **Code**: 200
+- **Content**: `{ message: "Logged Out Successfully" }`
+
+**Error Responses**:
+- **Code**: 401
+- **Content**: `{ message: "Unauthorized" }`
