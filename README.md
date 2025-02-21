@@ -64,3 +64,31 @@ Logout the authenticated user.
 **Error Responses**:
 - **Code**: 401
 - **Content**: `{ message: "Unauthorized" }`
+
+### POST /captains/register
+
+Register a new captain.
+
+**URL**: `/captains/register`
+
+**Method**: `POST`
+
+**Request Body**:
+- `email` (String): Captain's email.
+- `fullname.firstname` (String): Captain's first name.
+- `fullname.lastname` (String): Captain's last name.
+- `password` (String): Captain's password.
+- `vehicle.color` (String): Vehicle color.
+- `vehicle.plate` (String): Vehicle plate number.
+- `vehicle.capacity` (Number): Vehicle capacity.
+- `vehicle.vehicleType` (String): Type of vehicle (car, auto, bike).
+
+**Success Response**:
+- **Code**: 200
+- **Content**: `{ captain: Object }`
+
+**Error Responses**:
+- **Code**: 400
+- **Content**: `{ errors: Array }`
+- **Code**: 500
+- **Content**: `{ message: "Internal Server Error" }`
