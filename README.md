@@ -84,11 +84,71 @@ Register a new captain.
 - `vehicle.vehicleType` (String): Type of vehicle (car, auto, bike).
 
 **Success Response**:
-- **Code**: 200
-- **Content**: `{ captain: Object }`
+- **Code**: 201
+- **Content**: `{ captain: Object, token: String }`
 
 **Error Responses**:
 - **Code**: 400
 - **Content**: `{ errors: Array }`
 - **Code**: 500
 - **Content**: `{ message: "Internal Server Error" }`
+
+### POST /captains/login
+
+Login a captain.
+
+**URL**: `/captains/login`
+
+**Method**: `POST`
+
+**Request Body**:
+- `email` (String): Captain's email.
+- `password` (String): Captain's password.
+
+**Success Response**:
+- **Code**: 200
+- **Content**: `{ captain: Object, token: String }`
+
+**Error Responses**:
+- **Code**: 400
+- **Content**: `{ errors: Array }`
+- **Code**: 401
+- **Content**: `{ message: "Invalid Email or Password" }`
+
+### GET /captains/profile
+
+Get the profile of the authenticated captain.
+
+**URL**: `/captains/profile`
+
+**Method**: `GET`
+
+**Headers**:
+- `Authorization` (String): Bearer token.
+
+**Success Response**:
+- **Code**: 200
+- **Content**: `{ captain: Object }`
+
+**Error Responses**:
+- **Code**: 401
+- **Content**: `{ message: "Unauthorized" }`
+
+### GET /captains/logout
+
+Logout the authenticated captain.
+
+**URL**: `/captains/logout`
+
+**Method**: `GET`
+
+**Headers**:
+- `Authorization` (String): Bearer token.
+
+**Success Response**:
+- **Code**: 200
+- **Content**: `{ message: "Logged Out Successfully" }`
+
+**Error Responses**:
+- **Code**: 401
+- **Content**: `{ message: "Unauthorized" }`
