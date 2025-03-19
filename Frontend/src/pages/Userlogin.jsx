@@ -49,7 +49,7 @@ const Userlogin = () => {
             className="text-xl rounded w-full border bg-[#eeee] p-3 mb-8 placeholder:text-base outline-none"
           />
           <button className="w-full bg-black flex justify-center items-center text-white p-3 rounded font-apple font-semibold mb-3">
-            Login
+            Create Account
           </button>
           <p className="text-center font-apple ">
             New Here?
