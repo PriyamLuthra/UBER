@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Bold' ;
+    src: url('./assets/fonts/UberMove-Bold.woff2')format('truetype');
+}
+@font-face {
+    font-family: 'Regular' ;
+    src: url('./assets/fonts/UberMove-Regular.woff2')format('truetype');
+}
+@font-face {
+    font-family: 'Apple-regular';
+    src: url('./assets/fonts/sf-pro-text_regular.woff2')format('truetype');
+}
